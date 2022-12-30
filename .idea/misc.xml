@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/FunnyNumbers/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Projects/FunnyNumbers/app/src/main/res/layout/activity_main.xml" value="0.32526881720430106" />
+        <entry key="..\:/Projects/FunnyNumbers/app/src/main/res/layout/fragment_details.xml" value="0.358695652173913" />
+        <entry key="..\:/Projects/FunnyNumbers/app/src/main/res/layout/fragment_numbers.xml" value="0.358695652173913" />
       </map>
     </option>
   </component>
