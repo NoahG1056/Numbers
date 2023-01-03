@@ -90,7 +90,7 @@ class NumbersViewModelTest {
         val interactor = TestNumbersInteractor()
         val viewModel = NumbersViewModel(communications, interactor)
 
-        interactor.changeExpectedResult(NumbersResult.Success(listOf(Number("45", "random fact about 45"))))
+        interactor.changeExpectedResult(NumbersResult.Success(listOf(Number("45", "fact about 45"))))
         viewModel.fetchFact("45")
 
         assertEquals(1, communications.progressCalledList.size)
