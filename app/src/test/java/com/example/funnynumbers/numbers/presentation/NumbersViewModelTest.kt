@@ -21,14 +21,12 @@ class NumbersViewModelTest {
 
         viewModel.init(isFirstRun = true)
 
-        assertEquals(1, communications.progressCalledList.size)
         assertEquals(true, communications.progressCalledList[0])
-
         assertEquals(2, communications.progressCalledList.size)
         assertEquals(false, communications.progressCalledList[1])
 
         assertEquals(1, communications.stateCalledList.size)
-        assertEquals(UiState.Success(), communications.stateCalledList[0])
+        assertEquals(UiState.Success(emptyList<NumberUi>()), communications.stateCalledList[0])
 
         assertEquals(0, communications.numbersList.size)
         assertEquals(1, communications.timesShowList)
