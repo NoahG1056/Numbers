@@ -110,7 +110,7 @@ class NumbersViewModelTest {
     private class TestNumbersCommunications : NumbersCommunications {
 
         val progressCalledList = mutableListOf<Boolean>()
-        val stateCalledList = mutableListOf<Boolean>()
+        val stateCalledList = mutableListOf<UiState>()
         var timesShowList = 0
         val numbersList = mutableListOf<NumberUi>()
 
@@ -118,8 +118,8 @@ class NumbersViewModelTest {
             progressCalledList.add(show)
         }
 
-        override fun showState(state: UiState) {
-            stateCalledList.add(state)
+        override fun showState(uistate: UiState) {
+            stateCalledList.add(uistate)
 
         }
 

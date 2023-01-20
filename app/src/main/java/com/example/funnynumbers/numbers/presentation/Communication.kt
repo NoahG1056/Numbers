@@ -18,8 +18,18 @@ interface Communication {
             liveData.observe(owner, observer)
         }
     }
-    abstract class Ui<T>(liveData:MutableLiveData<T> = MutableLiveData()):Abstract<T>(){
-
+    abstract class Ui<T>(
+        liveData:MutableLiveData<T> = MutableLiveData()
+    ):Abstract<T>(liveData)
+    {
+        override fun map(source: T) {
+            liveData.value=source
+        }
+    }
+    abstract class Post<T>(
+        liveData:MutableLiveData<T> = MutableLiveData()
+    ):Abstract<T>(liveData) {
+        override fun map(source: T) = liveData.postValue(source)
 
     }
 }
